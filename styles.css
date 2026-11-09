@@ -598,3 +598,164 @@ img {
         padding: 3rem;
     }
 }
+
+/* PROJECTS PAGE */
+.projects-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: min(100% - 2rem, 75rem);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* PROJECTS INTRODUCTION */
+.projects-intro h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.projects-intro p {
+    max-width: 55rem;
+}
+
+/* PROJECT CATEGORY COLLECTION */
+.project-categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.project-categories > h2 {
+    margin-bottom: 0;
+}
+
+.project-categories > p {
+    max-width: 55rem;
+}
+
+/* PROJECT CATEGORY CARDS */
+.project-category-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--color-accent);
+}
+
+.project-category-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* PROJECT CARD IMAGES */
+.project-card-image {
+    margin-bottom: 1rem;
+}
+
+.project-card-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.375rem;
+}
+
+/* PROJECT CARD DESCRIPTIONS */
+.project-category-card p {
+    margin-bottom: 1.5rem;
+}
+
+/* PROJECT CATEGORY LINKS */
+.project-category-card a {
+    display: inline-block;
+    align-self: flex-start;
+    margin-top: auto;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+
+.project-category-card a:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-surface);
+}
+
+.project-category-card a:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+/* CONTACT CALL TO ACTION */
+.projects-contact {
+    padding: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-radius: 0.5rem;
+}
+
+.projects-contact h2 {
+    margin-top: 0;
+    color: var(--color-surface);
+}
+
+.projects-contact p {
+    max-width: 45rem;
+}
+
+/* GET IN TOUCH LINK */
+.projects-contact a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+
+.projects-contact a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.projects-contact a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 4px;
+}
+
+/* PROJECTS PAGE — DESKTOP ADJUSTMENTS */
+@media (min-width: 48rem) {
+
+    /* OVERALL LAYOUT */
+    .projects-main {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    /* PROJECT CATEGORY GRID */
+    .project-categories {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .project-categories > h2,
+    .project-categories > p {
+        grid-column: 1 / -1;
+    }
+
+    /* PROJECT CATEGORY CARDS */
+    .project-category-card {
+        padding: 1.75rem;
+    }
+
+    /* CONTACT CALL TO ACTION */
+    .projects-contact {
+        padding: 3rem;
+    }
+}
