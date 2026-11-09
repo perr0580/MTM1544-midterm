@@ -456,3 +456,145 @@ img {
 .about-photo img {
     max-width: 100%;
 }
+
+/* EDUCATION AND BACKGROUND */
+.about-education > h2 {
+    margin-bottom: 1.5rem;
+}
+
+.about-education article {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: var(--color-surface);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 0.5rem;
+}
+
+.about-education article h3 {
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+}
+
+.about-education article p {
+    margin-bottom: 0;
+}
+
+/* CREATIVE INTERESTS */
+.about-interests > h2 {
+    margin-bottom: 1rem;
+}
+
+.about-interests > p {
+    max-width: 55rem;
+}
+
+/* CREATIVE INTERESTS LIST */
+.about-interests ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin: 1.5rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.about-interests li {
+    padding: 0.75rem 1rem;
+    background-color: var(--color-surface);
+    border-radius: 0.375rem;
+    border-left: 3px solid var(--color-secondary);
+}
+
+/* GOALS AND CREATIVE VISION */
+.about-main > .about-goals {
+    padding: 2rem;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+}
+
+.about-goals h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.about-goals p {
+    max-width: 55rem;
+}
+
+/* EXPLORE MY WORK */
+.about-main > .about-projects {
+    padding: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-radius: 0.5rem;
+}
+
+.about-projects h2 {
+    margin-top: 0;
+    color: var(--color-surface);
+}
+
+.about-projects p {
+    max-width: 45rem;
+}
+
+/* VIEW MY PROJECTS LINK */
+.about-projects a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+
+.about-projects a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.about-projects a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 4px;
+}
+
+/* ABOUT ME PAGE — DESKTOP ADJUSTMENTS */
+@media (min-width: 48rem) {
+
+    /* EDUCATION CARDS */
+    .about-education {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .about-education > h2 {
+        grid-column: 1 / -1;
+    }
+
+    .about-education article {
+        margin-bottom: 0;
+    }
+
+    /* CREATIVE INTERESTS */
+    .about-interests ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .about-interests li {
+        flex: 1 1 calc(50% - 0.75rem);
+    }
+
+    /* GOALS AND CREATIVE VISION */
+    .about-main > .about-goals {
+        padding: 2.5rem;
+    }
+    
+    /* EXPLORE MY WORK */
+    .about-main > .about-projects {
+        padding: 3rem;
+    }
+}
