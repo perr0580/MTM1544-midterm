@@ -97,6 +97,30 @@ img {
     outline-offset: 4px;
 }
 
+/* SKIP TO MAIN CONTENT LINK */
+.skip-link {
+    display: inline-block;
+    padding: 0.75rem 1rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.875rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* HOVER EFFECT */
+.skip-link:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-surface);
+    text-decoration: underline;
+}
+
+/* KEYBOARD FOCUS */
+.skip-link:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
 
 /* MAIN NAVIGATION */
 .main-navigation {
