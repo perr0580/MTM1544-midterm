@@ -64,3 +64,132 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+/* HEADER */
+.site-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+}
+
+/* PERSONAL BRANDING */
+.site-branding {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.site-branding a {
+    color: var(--color-surface);
+    text-decoration: none;
+}
+
+.site-branding a:hover {
+    color: var(--color-accent);
+}
+
+.site-branding a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 4px;
+}
+
+
+/* MAIN NAVIGATION */
+.main-navigation {
+    width: 100%;
+}
+
+.main-navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.main-navigation > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* NAVIGATION LINKS */
+.main-navigation a {
+    display: block;
+    padding: 0.5rem 0.75rem;
+    color: var(--color-surface);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    text-decoration: none;
+}
+
+.main-navigation a:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--color-accent);
+    text-decoration-thickness: 0.15rem;
+    text-underline-offset: 0.3rem;
+}
+
+/* PROJECTS SUBMENU */
+.main-navigation > ul > li > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.main-navigation > ul > li > ul a {
+    font-size: 0.875rem;
+}
+
+/* KEYBOARD FOCUS */
+.main-navigation a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 3px;
+}
+
+/* WIDER SCREENS */
+@media (min-width: 48rem) {
+
+    .site-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .main-navigation {
+        width: auto;
+    }
+
+    .main-navigation > ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    /* PROJECTS DROPDOWN */
+    .main-navigation > ul > li {
+        position: relative;
+    }
+
+    .main-navigation > ul > li > ul {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 10;
+        min-width: 13rem;
+        align-items: flex-start;
+        padding: 0.5rem;
+        background-color: var(--color-primary);
+    }
+
+    .main-navigation > ul > li:hover > ul,
+    .main-navigation > ul > li:focus-within > ul {
+        display: flex;
+    }
+
+}
