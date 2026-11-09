@@ -372,3 +372,18 @@ img {
     outline: 3px solid var(--color-surface);
     outline-offset: 4px;
 }
+
+/* WIDER SCREENS */
+@media (min-width: 48rem) {
+
+    .site-footer {
+        padding: 3rem;
+    }
+
+    .footer-navigation ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem 1.5rem;
+    }
+
+}
