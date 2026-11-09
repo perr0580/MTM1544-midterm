@@ -414,3 +414,45 @@ img {
         padding: 2rem 0;
     }
 }
+
+/* ABOUT ME INTRODUCTION */
+.about-intro {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+/* INTRODUCTION HEADING */
+.about-intro h1 {
+    margin: 0;
+}
+
+/* INTRODUCTORY TEXT */
+.about-intro-text {
+    max-width: 40rem;
+}
+
+/* PROFILE PHOTOGRAPH */
+.about-photo img {
+    display: block;
+    width: 100%;
+    max-width: 25rem;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+}
+
+/* ABOUT ME INTRODUCTION — DESKTOP */
+.about-intro {
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 3rem;
+}
+
+.about-intro h1 {
+    grid-column: 1 / -1;
+}
+
+.about-photo img {
+    max-width: 100%;
+}
