@@ -387,3 +387,30 @@ img {
     }
 
 }
+
+/* ABOUT ME PAGE */
+.about-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: min(100% - 2rem, 75rem);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* ABOUT ME SECTIONS */
+.about-main > section {
+    padding: 1.5rem 0;
+}
+
+/* TABLET AND DESKTOP */
+@media (min-width: 48rem) {
+    .about-main {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .about-main > section {
+        padding: 2rem 0;
+    }
+}
