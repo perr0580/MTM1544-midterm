@@ -759,3 +759,160 @@ img {
         padding: 3rem;
     }
 }
+
+/* TV AND BROADCASTING PAGE */
+.broadcasting-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: min(100% - 2rem, 75rem);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* BROADCASTING INTRODUCTION */
+.broadcasting-intro h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.broadcasting-intro p {
+    max-width: 55rem;
+}
+
+/* BROADCASTING PROJECT SHOWCASE */
+.broadcasting-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.broadcasting-projects > h2 {
+    margin-bottom: 0;
+}
+
+.broadcasting-projects > p {
+    max-width: 55rem;
+}
+
+/* BROADCASTING PROJECT CARDS */
+.broadcasting-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--color-accent);
+}
+
+.broadcasting-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+/* PROJECT IMAGES */
+.broadcasting-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+/* PROJECT DESCRIPTIONS */
+.broadcasting-card p {
+    margin-bottom: 1rem;
+}
+
+/* PROJECT DETAILS */
+.broadcasting-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.broadcasting-card ul {
+    margin-top: 0;
+    padding-left: 1.25rem;
+}
+
+.broadcasting-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* BROADCASTING CONTACT SECTION */
+.broadcasting-contact {
+    padding: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-radius: 0.5rem;
+}
+
+.broadcasting-contact h2 {
+    margin-top: 0;
+    color: var(--color-surface);
+}
+
+.broadcasting-contact p {
+    max-width: 45rem;
+}
+
+/* GET IN TOUCH LINK */
+.broadcasting-contact a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+
+.broadcasting-contact a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.broadcasting-contact a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 4px;
+}
+
+/* TV AND BROADCASTING — DESKTOP ADJUSTMENTS */
+@media (min-width: 48rem) {
+
+    /* OVERALL PAGE LAYOUT */
+    .broadcasting-main {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    /* PROJECT SHOWCASE */
+    .broadcasting-projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .broadcasting-projects > h2,
+    .broadcasting-projects > p {
+        grid-column: 1 / -1;
+    }
+
+    /* THIRD PROJECT CARD */
+    .broadcasting-card:last-child {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 38rem;
+        justify-self: center;
+    }
+
+    /* PROJECT CARD SPACING */
+    .broadcasting-card {
+        padding: 1.75rem;
+    }
+
+    /* CONTACT SECTION */
+    .broadcasting-contact {
+        padding: 3rem;
+    }
+}
