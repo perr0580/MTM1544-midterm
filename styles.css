@@ -916,3 +916,156 @@ img {
         padding: 3rem;
     }
 }
+
+
+/* ========================================
+   VIDEO & FILM PAGE
+======================================== */
+
+/* MAIN PAGE LAYOUT */
+.video-film-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: min(100% - 2rem, 75rem);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* PAGE INTRODUCTION */
+.video-film-intro h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.video-film-intro p {
+    max-width: 55rem;
+}
+
+/* PROJECT SHOWCASE */
+.video-film-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.video-film-projects > h2 {
+    margin-bottom: 0;
+}
+
+.video-film-projects > p {
+    max-width: 55rem;
+}
+
+/* INDIVIDUAL PROJECT CARDS */
+.video-film-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--color-accent);
+}
+
+.video-film-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.video-film-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+.video-film-card p {
+    margin-bottom: 1rem;
+}
+
+.video-film-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.video-film-card ul {
+    margin-top: 0;
+    padding-left: 1.25rem;
+}
+
+.video-film-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* CONTACT SECTION */
+.video-film-contact {
+    padding: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-radius: 0.5rem;
+}
+
+.video-film-contact h2 {
+    margin-top: 0;
+    color: var(--color-surface);
+}
+
+.video-film-contact p {
+    max-width: 45rem;
+}
+
+.video-film-contact a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+
+.video-film-contact a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.video-film-contact a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 4px;
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 48rem) {
+
+    .video-film-main {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .video-film-projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .video-film-projects > h2,
+    .video-film-projects > p {
+        grid-column: 1 / -1;
+    }
+
+    .video-film-card:last-child {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 38rem;
+        justify-self: center;
+    }
+
+    .video-film-card {
+        padding: 1.75rem;
+    }
+
+    .video-film-contact {
+        padding: 3rem;
+    }
+}
