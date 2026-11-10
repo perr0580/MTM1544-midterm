@@ -918,9 +918,7 @@ img {
 }
 
 
-/* ========================================
-   VIDEO & FILM PAGE
-======================================== */
+/* VIDEO & FILM PAGE */
 
 /* MAIN PAGE LAYOUT */
 .video-film-main {
@@ -1071,9 +1069,7 @@ img {
 }
 
 
-/* ========================================
-   DIGITAL & SOCIAL MEDIA PAGE
-======================================== */
+/* DIGITAL & SOCIAL MEDIA PAGE */
 
 /* MAIN PAGE LAYOUT */
 .digital-media-main {
@@ -1223,3 +1219,153 @@ img {
     }
 }
 
+
+/* INTERACTIVE MEDIA PAGE */
+
+/* MAIN PAGE LAYOUT */
+.interactive-media-main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    width: min(100% - 2rem, 75rem);
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+/* PAGE INTRODUCTION */
+.interactive-media-intro h1 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.interactive-media-intro p {
+    max-width: 55rem;
+}
+
+/* PROJECT SHOWCASE */
+.interactive-media-projects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.interactive-media-projects > h2 {
+    margin-bottom: 0;
+}
+
+.interactive-media-projects > p {
+    max-width: 55rem;
+}
+
+/* INDIVIDUAL PROJECT CARDS */
+.interactive-media-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    background-color: var(--color-surface);
+    border-radius: 0.5rem;
+    border-top: 4px solid var(--color-accent);
+}
+
+.interactive-media-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.interactive-media-card img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border-radius: 0.375rem;
+}
+
+.interactive-media-card p {
+    margin-bottom: 1rem;
+}
+
+.interactive-media-card h4 {
+    margin-bottom: 0.5rem;
+}
+
+.interactive-media-card ul {
+    margin-top: 0;
+    padding-left: 1.25rem;
+}
+
+.interactive-media-card li {
+    margin-bottom: 0.5rem;
+}
+
+/* CONTACT SECTION */
+.interactive-media-contact {
+    padding: 2rem;
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    border-radius: 0.5rem;
+}
+
+.interactive-media-contact h2 {
+    margin-top: 0;
+    color: var(--color-surface);
+}
+
+.interactive-media-contact p {
+    max-width: 45rem;
+}
+
+.interactive-media-contact a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: var(--color-surface);
+    color: var(--color-primary);
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0.375rem;
+}
+
+.interactive-media-contact a:hover {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+}
+
+.interactive-media-contact a:focus-visible {
+    outline: 3px solid var(--color-surface);
+    outline-offset: 4px;
+}
+
+/* DESKTOP LAYOUT */
+@media (min-width: 48rem) {
+
+    .interactive-media-main {
+        gap: 3rem;
+        padding: 3rem 0;
+    }
+
+    .interactive-media-projects {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .interactive-media-projects > h2,
+    .interactive-media-projects > p {
+        grid-column: 1 / -1;
+    }
+
+    .interactive-media-card:last-child {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 38rem;
+        justify-self: center;
+    }
+
+    .interactive-media-card {
+        padding: 1.75rem;
+    }
+
+    .interactive-media-contact {
+        padding: 3rem;
+    }
+}
