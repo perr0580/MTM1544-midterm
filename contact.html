@@ -43,18 +43,18 @@
 
 
     <!-- MAIN CONTENT -->
-    <main id="main-content">
+    <main id="main-content" class="contact-main">
 
     <!-- CONTACT FORM -->
-<section aria-labelledby="contact-form-heading">
+<section class="contact-form-section" aria-labelledby="contact-form-heading">
 
-    <h2 id="contact-form-heading">Contact Me</h2>
+    <h1 id="contact-form-heading">Contact Me</h1>
 
     <!-- POST is the best method as it doesn't place submitted form values directly into the URL which GET does. This is important as the contact form collects personal information (names, email addresses, and messages.) -->
-    <form method="post">
+    <form class="contact-form" method="post">
 
         <!-- NAME -->
-        <div>
+        <div class="form-group">
             <label for="name">Your name</label>
             <input 
                 type="text" 
@@ -64,7 +64,7 @@
         </div>
 
         <!-- EMAIL -->
-        <div>
+        <div class="form-group">
             <label for="email">Email Address</label>
             <input 
                 type="email" 
@@ -74,7 +74,7 @@
         </div>
 
         <!-- SUBJECT -->
-        <div>
+        <div class="form-group">
             <label for="subject">Subject</label>
             <select id="subject" name="subject">
                 <option value="">Select a subject</option>
@@ -88,7 +88,7 @@
 
 
         <!-- MESSAGE -->
-        <div>
+        <div class="form-group">
             <label for="message">Message</label>
 
             <textarea 
@@ -99,7 +99,7 @@
         </div>
 
         <!-- PREFERRED CONTACT METHOD -->
-        <fieldset>
+        <fieldset class="contact-preference">
             <legend>Preferred Contact Method</legend>
 
             <div>
@@ -138,11 +138,12 @@
 </section>
 
 <!-- CONTACT INQUIRY GUIDE -->
-<section aria-labelledby="inquiry-guide-heading">
+<section class="inquiry-guide" aria-labelledby="inquiry-guide-heading">
 
     <h2 id="inquiry-guide-heading">Contact Inquiry Guide</h2>
 
-    <table>
+    <div class="contact-table-wrapper">
+        <table class="inquiry-table">
         <!-- TABLE CAPTION -->
         <caption>Examples of inquiries and information visitors can include</caption>
 
@@ -192,6 +193,7 @@
                 </tfoot>
 
             </table>
+    </div>
 
         </section>
 
